@@ -25,3 +25,5 @@ This command is used to train FVD-DPM model. The `gpu_number` represents the num
 python -m torch.distributed.run --nproc_per_node gpu_number main.py --dataset dataset_name --do_train test
 ```
 Execute this command to test FVD-DPM on the test set.
+# Usage 
+This repository is partially based on [DPM-SNC](https://github.com/hsjang0/DPM-SNC).
