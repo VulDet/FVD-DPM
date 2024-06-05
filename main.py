@@ -27,7 +27,7 @@ def main(work_type_args):
             
 
 if __name__ == '__main__':
-    dist.init_process_group("nccl", world_size=1)
+    dist.init_process_group("nccl", world_size=1)   # world_size is equal to gpu_number
     work_type_parser = argparse.ArgumentParser()
     x = work_type_parser.parse_known_args()
     main(work_type_parser.parse_known_args()[0])
