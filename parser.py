@@ -4,7 +4,7 @@ class Parser:
 
     def __init__(self):
 
-        self.parser = argparse.ArgumentParser(description='DPM-GSP')
+        self.parser = argparse.ArgumentParser(description='FVD-DPM')
         self.set_arguments()
 
     def set_arguments(self):
