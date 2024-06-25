@@ -1,3 +1,4 @@
+This is an official implementation of our paper "FVD-DPM: Fine-grained Vulnerability Detection via Conditional Diffusion Probabilistic Models" accepted at the 33rd USENIX Security Symposium (USENIX Security '24).
 # Overview 
 In this repository, you will find a Python implementation of our FVD-DPM. As described in our paper, FVD-DPM formalizes vulnerability detection as a diffusion-based graph-structured prediction problem. Firstly, it generates a new fine-grained code representation by extracting graph-level program slices (i.e., GrVCs) from the Code Joint Graph. Then, a conditional diffusion probabilistic model is employed to model the node label distribution in the program slices, predicting which nodes are vulnerable. FVD-DPM achieves both precise vulnerability identification (i.e., slice-level detection) and vulnerability localization (i.e., statement-level detection). 
 # Setting up the environment
