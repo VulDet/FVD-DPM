@@ -4,7 +4,7 @@ We use joern to parse source code. The input is source code files, and the outpu
 ```
 java -jar .../joern-0.3.1/bin/joern.jar .../source_code/Linux/
 ```
-Next, we start the Neo4j database to enable Python to query the code structure diagrams stored within it.
+Next, we start the Neo4j database to enable Python to query the code structure graphs stored within it.
  ```
 cd /usr/lib/neo4j-community-2.1.5/bin
 ./neo4j start-no-wait
