@@ -28,4 +28,7 @@ python -m torch.distributed.run --nproc_per_node gpu_number main.py --dataset da
 ```
 Execute this command to test FVD-DPM on the test set.
 # Usage 
-This repository is partially based on [DPM-SNC](https://github.com/hsjang0/DPM-SNC).
+This repository is partially based on [DPM-SNC](https://github.com/hsjang0/DPM-SNC) and [SySeVR](https://github.com/SySeVR/SySeVR.git).
+# Acknowledgements
+- Special thanks to authors of SySeVR ([Li et al.](https://doi.org/10.1109/TDSC.2021.3051525)).
+- Special thanks to authors of DPM-SNC ([Jang et al.](https://proceedings.neurips.cc/paper_files/paper/2023/file/65d32185f73cbf4535449a792c63926f-Paper-Conference.pdf))
