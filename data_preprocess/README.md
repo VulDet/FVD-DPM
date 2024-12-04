@@ -6,7 +6,7 @@ java -jar .../joern-0.3.1/bin/joern.jar .../source_code/Linux/
 ```
 2. Start the Neo4j database to enable Python to query the code structure diagrams stored within it.
  ```
-cd /usr/lib/neo4j-community-2.1.8/bin
+cd /usr/lib/neo4j-community-2.1.5/bin
 ./neo4j start-no-wait
 ```  
 3. get_cfg_relation.py: This file is used to get Control Flow Graph (CFG).
