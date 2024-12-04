@@ -254,7 +254,7 @@ def drawGraph(db, edges, func_entry_node, graph_type):
 
         endNode = str(edge.end_node._id)
         if isNodeExist(g, endNode) == False:
-            if graph_type == 'cpg' and edge.end_node.properties['code'] == 'EXIT':
+            if graph_type == 'pdg' and edge.end_node.properties['code'] == 'EXIT':
                 continue
 
             if edge.end_node.properties['code'] == 'ERROR':
@@ -264,7 +264,7 @@ def drawGraph(db, edges, func_entry_node, graph_type):
                          'location': edge.end_node.properties['location'], 'filepath':filepath, 'functionId':str(edge.end_node.properties['functionId'])}
             g.add_vertex(endNode, **node_prop)
 
-        if graph_type == 'cpg':
+        if graph_type == 'pdg':
             edge_prop = {'var': edge.properties['var']}
         else:
             edge_prop = {'var': edge.properties['flowLabel']}          
@@ -283,16 +283,6 @@ def translatePDGByNode(db, func_node):
 
     return g, node_type
 
-def translateCPGByNode(db, func_node):
-    func_id = func_node._id
-    astEdges = getASTEdges(db, func_id)
-    ddgEdges = getDDGEdges(db, func_id)
-    cdgEdges = getCDGEdges(db, func_id)
-    Edges = astEdges + ddgEdges + cdgEdges
-    graph_type = 'cpg'
-    g, node_type = drawGraph(db, Edges, func_node, graph_type)
-
-    return g, node_type
 
 def translateCFGByNode(db, func_node):
     func_id = func_node._id
