@@ -694,13 +694,9 @@ def sensivar_slice(project, _dict):
     count = 1
     source_filepath = f"../data/source_code/{project}/"
     store_filepath = f"./GrVCs/{project}/"
-    f1 = open(f"./slicing_entry_nodes/{project}/pointer_use_entry_nodes.pkl", 'rb')
-    pointer_variables = pickle.load(f1)
-    f1.close()
-    f2 = open(f"./slicing_entry_nodes/{project}/array_use_entry_nodes.pkl", 'rb')
-    array_variables = pickle.load(f2)
-    f2.close()
-    dict_unsliced_variables = {'Linux': pointer_variables['Linux']+array_variables['Linux']}
+    f = open(f"./slicing_entry_nodes/{project}/sensivar_entry_nodes.pkl", 'rb')
+    dict_unsliced_variables = pickle.load(f)
+    f.close()
 
     save_data = pd.DataFrame(columns=['filename', 'nodes', 'edges', 'nodes_label', 'nodes_codes', 'edges_label', 'code_lines', 'vul_type', 'node_target', 'target'])
 
@@ -838,7 +834,7 @@ if __name__ == "__main__":
         _dict = pickle.load(f)
     f.close()
 
-    # sensifunc_slice(project, _dict)
+    sensifunc_slice(project, _dict)
     sensivar_slice(project, _dict)
     expression_slice(project, _dict)
 
