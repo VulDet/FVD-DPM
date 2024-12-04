@@ -11,7 +11,7 @@ cd /usr/lib/neo4j-community-2.1.5/bin
 ```  
 3. get_cfg_relation.py: This file is used to get Control Flow Graph (CFG).
 
-4. complete_PDG.py: This file is used to get Program Dependency Graph (PDG).
+4. complete_PDG.py: This file is used to get Program Dependency Graph (PDG).
 
 5. access_db_operate.py: This file is used to get the Call Graph (CG) of functions.
 
