@@ -1,3 +1,5 @@
+## Environment
+joern 0.3.1, neo4j 2.1.5, python3.6 
 ## Generating Graph-based Vulnerability Candidate slices (i.e., GrVCs)
 
 We use joern to parse source code. The input is source code files, and the output is a file named .joernIndex.
